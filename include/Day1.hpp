@@ -12,6 +12,6 @@ public:
     void run() override;
 
 private:
-    void q1();
-    void q2();
+    void q1() const;
+    void q2() const;
 };

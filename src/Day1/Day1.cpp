@@ -1,4 +1,3 @@
-#include <filesystem>
 #include <fstream>
 #include <string>
 #include <vector>
@@ -17,25 +16,11 @@ void Day1::run()
     q2();
 }
 
-void Day1::q1()
+void Day1::q1() const
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    fs::path file_path = "inputs/day1_q1.txt";
-
-    if (!fs::exists(file_path))
-    {
-        cerr << "File does not exist." << endl;
-        return;
-    }
-
-    ifstream input_file(file_path);
-
-    if (!input_file.is_open())
-    {
-        cerr << "Failed to open the file." << endl;
-        return;
-    }
+    auto input_file = ISolution::get_file_handler("inputs/day1_q1.txt").value();
 
     string line;
     vector<int> vec1, vec2;
@@ -72,25 +57,11 @@ void Day1::q1()
     cout << "Day1 Q1: Result: " << sum << "\t| Time: " << elapsed.count() << "ms" << endl;
 }
 
-void Day1::q2()
+void Day1::q2() const
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    fs::path file_path = "inputs/day1_q1.txt";
-
-    if (!fs::exists(file_path))
-    {
-        cerr << "File does not exist." << endl;
-        return;
-    }
-
-    ifstream input_file(file_path);
-
-    if (!input_file.is_open())
-    {
-        cerr << "Failed to open the file." << endl;
-        return;
-    }
+    auto input_file = ISolution::get_file_handler("inputs/day1_q1.txt").value();
 
     string line;
     vector<int> data1;

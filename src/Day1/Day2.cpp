@@ -17,21 +17,7 @@ void Day2::q1() const
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    fs::path file_path = "inputs/day2_q1.txt";
-
-    if (!fs::exists(file_path))
-    {
-        cerr << "File does not exist." << endl;
-        return;
-    }
-
-    ifstream input_file(file_path);
-
-    if (!input_file.is_open())
-    {
-        cerr << "Failed to open the file." << endl;
-        return;
-    }
+    auto input_file = ISolution::get_file_handler("inputs/day2_q1.txt").value();
 
     string line;
 
@@ -94,21 +80,7 @@ void Day2::q2() const
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    fs::path file_path = "inputs/day2_q1.txt";
-
-    if (!fs::exists(file_path))
-    {
-        cerr << "File does not exist." << endl;
-        return;
-    }
-
-    ifstream input_file(file_path);
-
-    if (!input_file.is_open())
-    {
-        cerr << "Failed to open the file." << endl;
-        return;
-    }
+    auto input_file = ISolution::get_file_handler("inputs/day2_q1.txt").value();
 
     string line;
     int safe_counter = 0;

@@ -1,11 +1,34 @@
 #pragma once
 
-#include <iostream>
 #include <chrono>
+#include <iostream>
+#include <filesystem>
+#include <fstream>
+#include <optional>
 
-class ISolution {
+class ISolution
+{
 public:
     virtual ~ISolution() = default;
 
     virtual void run() = 0;
+
+    std::optional<std::ifstream> get_file_handler(std::filesystem::path path) const
+    {
+        if (!std::filesystem::exists(path))
+        {
+            std::cerr << "File does not exist." << std::endl;
+            return std::nullopt;
+        }
+
+        std::ifstream input_file(path);
+
+        if (!input_file.is_open())
+        {
+            std::cerr << "Failed to open the file." << std::endl;
+            return std::nullopt;
+        }
+
+        return input_file;
+    }
 };
