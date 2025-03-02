@@ -8,7 +8,9 @@ using namespace std;
 
 int main()
 {
-    array<unique_ptr<ISolution>, 1> days = {make_unique<Day1>()};
+    array<unique_ptr<ISolution>, 2> 
+        days = {make_unique<Day1>(),
+                make_unique<Day2>()};
 
     for (const auto &d : days)
     {
