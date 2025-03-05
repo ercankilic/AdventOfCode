@@ -25,6 +25,12 @@ link_directories(${CMAKE_BINARY_DIR}/2024/**)
 # Link libraries (if any)
 target_link_libraries(AoC24 PRIVATE Days24)
 
-add_custom_target(copy-inputs ALL
-    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/2024/inputs/ ${CMAKE_BINARY_DIR}/2024/inputs/
-)
+if(${REAL}) 
+    add_custom_target(copy-inputs ALL
+       COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/2024/inputs/real/ ${CMAKE_BINARY_DIR}/2024/inputs/
+    )
+else()
+    add_custom_target(copy-inputs ALL
+        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/2024/inputs/ ${CMAKE_BINARY_DIR}/2024/inputs/
+    )
+endif()
