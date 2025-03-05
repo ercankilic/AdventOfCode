@@ -8,7 +8,6 @@
 #include "Day1.hpp"
 
 using namespace std;
-namespace fs = std::filesystem;
 
 void Day1::run()
 {
@@ -20,7 +19,7 @@ void Day1::q1() const
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    auto input_file = ISolution::get_file_handler("inputs/day1_q1.txt").value();
+    auto input_file = ISolution::get_file_handler("inputs/day1.txt").value();
 
     string line;
     vector<int> vec1, vec2;
@@ -61,7 +60,7 @@ void Day1::q2() const
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    auto input_file = ISolution::get_file_handler("inputs/day1_q1.txt").value();
+    auto input_file = ISolution::get_file_handler("inputs/day1.txt").value();
 
     string line;
     vector<int> data1;

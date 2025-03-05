@@ -1,11 +1,9 @@
-#include <filesystem>
 #include <fstream>
 #include <string>
 
 #include "Day2.hpp"
 
 using namespace std;
-namespace fs = std::filesystem;
 
 void Day2::run()
 {
@@ -17,7 +15,7 @@ void Day2::q1() const
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    auto input_file = ISolution::get_file_handler("inputs/day2_q1.txt").value();
+    auto input_file = ISolution::get_file_handler("inputs/day2.txt").value();
 
     string line;
 
@@ -80,7 +78,7 @@ void Day2::q2() const
 {
     auto start = std::chrono::high_resolution_clock::now();
 
-    auto input_file = ISolution::get_file_handler("inputs/day2_q1.txt").value();
+    auto input_file = ISolution::get_file_handler("inputs/day2.txt").value();
 
     string line;
     int safe_counter = 0;
