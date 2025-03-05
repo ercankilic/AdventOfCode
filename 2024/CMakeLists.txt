@@ -31,6 +31,6 @@ if(${REAL})
     )
 else()
     add_custom_target(copy-inputs ALL
-        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/2024/inputs/ ${CMAKE_BINARY_DIR}/2024/inputs/
+        COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/2024/inputs/test/ ${CMAKE_BINARY_DIR}/2024/inputs/
     )
 endif()
