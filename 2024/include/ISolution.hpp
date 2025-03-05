@@ -1,14 +1,14 @@
 #pragma once
 
 #include <chrono>
-#include <iostream>
 #include <filesystem>
 #include <fstream>
+#include <iostream>
 #include <optional>
 
 class ISolution
 {
-public:
+  public:
     virtual ~ISolution() = default;
 
     virtual void run() = 0;

@@ -1,7 +1,7 @@
+#include "Day3.hpp"
+
 #include <regex>
 #include <string>
-
-#include "Day3.hpp"
 
 using namespace std;
 
@@ -80,13 +80,14 @@ void Day3::q2() const
             }
             else
             {
-                if(is_active) {
+                if (is_active)
+                {
                     auto comma_index = match_str.find(',');
                     auto close_parentheses_index = match_str.find(')');
-                    
+
                     auto num1 = stoi(match_str.substr(open_parentheses_index + 1, comma_index));
                     auto num2 = stoi(match_str.substr(comma_index + 1, close_parentheses_index));
-                    
+
                     res += (num1 * num2);
                 }
             }

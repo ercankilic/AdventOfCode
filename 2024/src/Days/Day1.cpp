@@ -1,9 +1,9 @@
-#include <fstream>
-#include <string>
-#include <vector>
-#include <map>
 #include <algorithm>
 #include <cstdlib> // For std::abs
+#include <fstream>
+#include <map>
+#include <string>
+#include <vector>
 
 #include "Day1.hpp"
 
@@ -78,10 +78,12 @@ void Day1::q2() const
 
         data1.emplace_back(stoi(v1));
         auto tmp_v2 = stoi(v2);
-        if(data2.contains(tmp_v2)) {
+        if (data2.contains(tmp_v2))
+        {
             data2[stoi(v2)]++;
         }
-        else {
+        else
+        {
             data2[stoi(v2)] = 1;
         }
     }

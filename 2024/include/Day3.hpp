@@ -1,18 +1,18 @@
 #pragma once
 
+#include "ISolution.hpp"
 #include <iostream>
 #include <vector>
-#include "ISolution.hpp"
 
 class Day3 : public ISolution
 {
-public:
+  public:
     Day3() = default;
     ~Day3() = default;
 
     void run() override;
 
-private:
+  private:
     void q1() const;
     void q2() const;
 };

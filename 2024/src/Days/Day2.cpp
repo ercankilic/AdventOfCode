@@ -105,17 +105,14 @@ void Day2::q2() const
         {
             int skip_index = 0;
             vector<int> new_vector;
-            
+
             for (int i = 0; i < vec.size(); ++i)
             {
-                copy_if(vec.begin(), vec.end(),
-                        back_inserter(new_vector),
-                        [skip_index, i](int x) mutable
-                        {
-                            bool res = (i != skip_index);
-                            ++skip_index;
-                            return res;
-                        });
+                copy_if(vec.begin(), vec.end(), back_inserter(new_vector), [skip_index, i](int x) mutable {
+                    bool res = (i != skip_index);
+                    ++skip_index;
+                    return res;
+                });
 
                 if (is_safe_report(new_vector))
                 {
