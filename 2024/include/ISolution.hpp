@@ -17,7 +17,7 @@ public:
     {
         if (!std::filesystem::exists(path))
         {
-            std::cerr << "File does not exist." << std::endl;
+            std::cerr << "File does not exist. Path: " << path << std::endl;
             return std::nullopt;
         }
 
@@ -25,7 +25,7 @@ public:
 
         if (!input_file.is_open())
         {
-            std::cerr << "Failed to open the file." << std::endl;
+            std::cerr << "Failed to open the file. Path: " << path << std::endl;
             return std::nullopt;
         }
 
