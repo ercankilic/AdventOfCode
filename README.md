@@ -14,7 +14,6 @@ This is a C++ project and build manages by cmake.
 
 ### Build
 ___
-
 ```bash
 mkdir build
 cd build
@@ -22,11 +21,13 @@ cmake ../
 make
 ```
 
-There is a Cmake option to choose which inputs is using while compiling and running. By default this option is _off_ state. If it is _off_ state, make command copy files under inputs folder otherwise inputs/real folder.
+There is a Cmake option to choose which inputs is using while compiling and running. By default this option is _off_ state. If it is _off_ state, make command copy files under inputs/test folder otherwise inputs/real folder.
 
 ```bash
 -DREAL=ON
 ```
+
+I am not going to share real inputs as stated in the Advent of Code about page. If you'd like test my code with your real input, please locate those on proper folder.
 
 ### Run
 ___
