@@ -14,7 +14,7 @@ file(GLOB_RECURSE DAYS_LIB "${CMAKE_SOURCE_DIR}/2024/src/Days/*.cpp")
 add_library(Days24 STATIC ${DAYS_LIB})
 
 # Add the executable
-add_executable(AoC24 ${SOURCES})
+add_executable(AoC ${SOURCES})
 
 # Include directories (if any)
 include_directories(${CMAKE_SOURCE_DIR}/2024/include)
@@ -23,7 +23,7 @@ include_directories(${CMAKE_SOURCE_DIR}/2024/include)
 link_directories(${CMAKE_BINARY_DIR}/2024/**)
 
 # Link libraries (if any)
-target_link_libraries(AoC24 PRIVATE Days24)
+target_link_libraries(AoC PRIVATE Days24)
 
 if(${REAL}) 
     add_custom_target(copy-inputs ALL

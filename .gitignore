@@ -36,3 +36,6 @@
 
 # Cmake
 build/*
+
+# Real input
+*/inputs/real/*
