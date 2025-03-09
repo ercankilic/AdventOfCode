@@ -9,11 +9,12 @@ using namespace std;
 int main()
 {
     auto start = std::chrono::high_resolution_clock::now();
-    array<unique_ptr<ISolution>, 4> 
+    array<unique_ptr<ISolution>, 5> 
         days = {make_unique<Day1>(),
                 make_unique<Day2>(),
                 make_unique<Day3>(),
-                make_unique<Day4>()
+                make_unique<Day4>(),
+                make_unique<Day5>()
                };
 
     for (const auto &d : days)
